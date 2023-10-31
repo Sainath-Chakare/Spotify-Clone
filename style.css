@@ -1,0 +1,456 @@
+*{
+   color:white;
+   text-decoration: none;
+}
+body{
+   background-color: black;
+   margin:0px;
+   padding:0px;
+   overflow:hidden;
+   font-family: 'Montserrat', sans-serif;
+}
+.main{
+   display:flex;
+   height:100vh;
+}
+.sidepanel{
+   background-color: #000;
+   width:310px;
+   padding:0.5rem;
+}
+.main-content{
+   background-color: #121212;
+   flex:1;
+   padding:0 1rem 1rem 1rem;
+   overflow:scroll;
+}
+.main-content::-webkit-scrollbar{
+   width:0.75rem;
+}
+.main-content:hover::-webkit-scrollbar{ 
+   width:0.75rem !important;
+   background:transparent;
+}
+.main-content:hover::-webkit-scrollbar-thumb{
+   background:#232323;
+}
+.music-system{
+   background-color:#000;
+   position: fixed;
+   bottom:0px;
+   width:100%;
+   height:82px;
+}
+
+/* ************************************************NAVBAR************************ */
+
+.side-bar-one{
+   background-color:#121212;
+   height:110px;
+   /* width:320px; */
+   border-radius:0.5rem;
+   display:flex;
+   flex-direction: column;
+   justify-content:flex-start;
+   margin-bottom:0.5rem;
+}
+.side-bar-one i{
+   margin:0 1.25rem 0 1.5rem;
+   font-size:1.20rem;
+}
+.search{
+   opacity:0.7;
+}
+.search:hover{
+   opacity:1;
+   cursor: pointer;
+}
+.home{
+   font-weight: 700;
+   cursor: pointer;
+}
+.side-bar-two{
+   background-color:#121212;
+   border-radius: 0.5rem;
+   padding:1rem 1rem;
+   /* overflow:scroll !important; */
+   flex:1;
+   height:100%;
+}
+.library{
+   display: flex;
+   justify-content: space-between;
+   align-items:baseline;
+}
+.lib-logo{
+   height:1.20rem;
+   margin-left:0.5rem;
+}
+.library-icon-end i{
+   margin-left:1rem;
+   margin-right:0.25rem;
+}
+.library-icon-start img{
+   /* margin-left:0.25rem; */
+   margin-right:1rem;
+}
+.library-icon-start a{
+   font-size: 1rem;
+}
+.library-icon-start{
+   opacity:0.7;
+}
+.library-icon-start:hover{
+   opacity:1;
+}
+.plus,.arrow-right {
+   opacity:0.7;
+}
+.plus:hover{
+   opacity:1;
+}
+.arrow-right:hover{
+   opacity:1;
+}
+.badge{
+   border:none;
+   border-radius: 10rem;
+   background-color: #232323;
+   padding:0.5rem 1rem;
+   font-weight:600;
+   margin:1.5rem 0.5rem 1.5rem 0;
+}
+.nav-search select{
+   background-color: #121212;
+   border:none;
+   width:5rem;
+   font-size: 0.9rem;
+   font-weight:500;
+}
+.nav-search option{
+   background-color: #232323;
+   border:none;
+   font-size: 0.9rem;
+}
+.nav-search{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom:0.75rem;
+}
+.library-nav{
+   position:sticky;
+   top:0;
+}
+.nav-card{
+   display:flex;
+   align-items:flex-start;
+   padding:0.5rem 0;
+   background-color: #141414;
+}
+.nav-card:hover{
+   background-color: #232323;
+}
+.nav-card img{
+   margin-left:0.5rem;
+   height:3rem;
+}
+.nav-card-title{
+   font-size: 0.9rem;
+   font-weight: 600;
+}
+.nav-card-subtitle{
+   font-size: 0.8rem;
+   opacity:0.7;
+}
+.nav-card-subtitle i{
+   margin-right:0.5rem;
+}
+.nav-card-inside{
+   flex:1;
+   padding:0 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height:3rem;
+}
+
+/* ****************************************MAIN CONTENT***************************** */
+
+.main-content{
+   margin:0.5rem 0.5rem 0 0;
+   border-radius: 0.5rem;
+}
+.main-navbar{
+   display:flex;
+   align-items:center;
+   justify-content: space-between;
+   position: sticky;
+   z-index:10;
+   top:0;
+   background-color: #121212;
+   padding-top:1rem;
+   padding-bottom:0.8rem;
+}
+.nav-btn-one, .nav-btn-two{
+   margin-top:0rem;
+   margin-bottom:0rem;
+}
+.nav-btn-one{
+   color:black;
+   background-color:white;
+}
+.btn-download{
+   margin-right:0.25rem;
+}
+.nav-user{
+   background-color: #232323;
+   border-radius: 50%;
+   margin-right:0.25rem;
+}
+.nav-forward, .nav-backward{
+   margin-left: 0.5rem;
+   background-color:#232323;
+   border-radius: 50%;
+   padding:0.2rem;
+}
+.main-arrows{
+   padding-top:0.1rem;
+}
+@media(max-width:1000px){
+   .nav-forward, .nav-btn-one{
+      display: none;
+   }
+}
+.main-content h1{
+   margin: 0 0 1.2rem 0;
+   font-size: 2rem;
+}
+.main-nav-card img{
+   margin-left: 0;
+   height:4.2rem;
+   border-top-left-radius: 0.25rem;
+   border-bottom-left-radius: 0.25rem;
+}
+.main-nav-card{
+   display:flex;
+   align-items:flex-start;
+   background-color: rgba(255,255,255, 0.1);
+   border-radius:0.25rem;
+   width:19rem;
+   margin:0 0.8rem 1rem 0.8rem;
+   flex:1;
+}
+.main-nav-card .nav-card-inside{
+   display: flex;
+   flex-direction:row;
+   justify-content: flex-start;
+   align-items:center;
+   height: 4.2rem;
+   padding-right:5.5rem;
+}
+.main-card-container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:flex-start;
+}
+.main-nav-card:hover{
+   background-color: rgba(255,255,255, 0.2);
+}
+.main-head{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin:1rem 0rem;
+}
+.main-title-one{
+   font-size: 1.5rem;
+   font-weight: 700;
+}
+.main-title-two{
+   font-size: 0.9rem;
+   font-weight: 600;
+}
+.main-title-one:hover{
+   text-decoration: underline 2px solid white;
+}
+.main-title-two:hover{
+   text-decoration: underline 2px solid white;
+}
+.head-card-container{
+   display: flex;
+   flex-direction:row;
+   align-items: center;
+   justify-content:flex-start;
+   /* padding: 0 0.5rem 0 0.5rem; */
+   flex-wrap: wrap;
+}
+.head-card-item{
+   background-color:#181818;
+   height:17rem;
+   width:11.7rem;
+   padding:1rem;
+   border-radius:0.3rem;
+   margin-bottom: 1.25rem;
+   margin-right:1.5rem;
+}
+.head-card-item:hover{
+   background-color:#232323;
+}
+.head-card-container img{
+   height:11.7rem;
+   width:11.7rem;
+   border-radius:0.3rem;
+}
+.main-subtitle-one{
+   font-size: 1rem;
+   font-weight: 600;
+   margin-bottom: 0.5rem;
+}
+.main-subtitle-two{
+   font-size: 0.9rem;
+   margin-top:0.25rem;
+   opacity: 0.6;
+}
+.footer{
+   margin:0 5rem 0 5rem;
+   width:80%;
+   height:25%;
+   border-bottom: 0.1px solid white;
+}
+.footer-one{
+   width:80%;
+   height:35%;
+}
+
+/* ****************************************MUSIC PLAYER***************************** */
+.music-system{
+   display: flex;
+}
+.music-info{
+   width:25%;
+   /* background-color: aqua; */
+   margin:1rem 1rem 0.8rem 1.2rem;
+   display:flex;
+   align-items: center;
+}
+.music-control{
+   width:50%;
+   /* background-color:chocolate; */
+   margin:1rem 1rem 0.5rem 1rem;
+}
+.music-options{
+   width:25%;
+   /* background-color: aqua; */
+   margin:1rem 1rem 0.5rem 1rem;
+}
+.music-info img{
+   height:100%;
+}
+.music-info .music-info-names{
+   justify-content: center;
+   padding-left:0.9rem;
+   padding-right:0;
+   height:100%;
+}
+.music-info .music-info-subtitle{
+   font-size:0.7rem;
+   padding-top:0.2rem;
+}
+.music-info i{
+   margin-left:1rem;
+   opacity: 0.7;
+}
+.music-info i:hover{
+   opacity: 1;
+}
+.music-control{
+   display: flex;
+   flex-direction: column;
+   justify-content:space-between;
+}
+.music-control-top img{
+   height:1rem;
+   margin:0 1rem;
+   opacity: 0.7;
+}
+.music-control-top{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.music-control-top img:hover{
+   opacity:1;
+}
+.music-control-bottom{
+   display: flex;
+   justify-content:center;
+}
+.music-control-bottom span{
+   font-size: 0.8rem;
+   margin:0.2rem;
+}
+.progress-bar{
+   width:70%;
+   appearance: none;
+   cursor:pointer;
+   background-color: transparent;
+}
+.progress-bar::-webkit-slider-thumb{
+   appearance: none;
+   height:0.75rem;
+   width:0.75rem;
+   background-color: #1ED760;
+   border-radius: 50%;
+   margin-top:-0.25rem;
+}
+.progress-bar::-webkit-slider-runnable-track{
+   background-color: #ddd;
+   border-radius: 100px;
+   height:0.2rem;
+}
+.music-options{
+   display:flex;
+   align-items: center;
+   justify-content: center;
+}
+.music-options i{
+   margin:0.5rem;
+   opacity:0.7;
+   font-size:1rem;
+}
+.music-options span{
+   margin:0.5rem;
+   opacity:0.7;
+   font-size:1rem;
+}
+.music-options i:hover{
+   opacity:1;
+}
+.music-options span:hover{
+   opacity:1;
+}
+.music-options input{
+   appearance: none;
+   margin-left:0.5rem;
+   width:30%;
+}
+.music-options input::-webkit-slider-runnable-track{
+   height:0.25rem;
+   background-color: #ddd;
+   border-radius: 100px;
+}
+.music-options input::-webkit-slider-thumb{
+   appearance: none;
+   height:0.75rem;
+   width:0.75rem;
+   border-radius: 50%;
+   background-color: #1ED760;
+   margin-top: -0.25rem;
+}
+.play-hover{
+   background-color: transparent;
+   color:#1ED760;
+}
+
+
+
